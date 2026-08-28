@@ -219,7 +219,13 @@
             background: #DAE9F8;
             color: #1E60A2;
         }
-        .tabelog-score {
+        .ig-mini {
+            display: inline-flex; align-items: center; gap: 2px;
+            color: #1E60A2; text-decoration: none; vertical-align: middle;
+        }
+        .ig-mini svg { width: 13px; height: 13px; display: block; }
+        .ig-mini .ig-arr { font-size: 0.7rem; font-weight: 800; line-height: 1; }
+                .tabelog-score {
             display: inline-flex; align-items: center; justify-content: center;
             min-width: 2.6rem; font-size: 1.05rem; font-weight: 800; color: #fff;
             background: #F14A00; border-radius: 0.5rem; padding: 0.18rem 0.45rem;
@@ -229,7 +235,7 @@
         .tabelog-score:hover { filter: brightness(1.08); }
         .city-stamp {
             position: absolute; right: 1.05rem; bottom: 0.65rem;
-            font-size: 1.55rem; font-weight: 700; color: #C00000;
+            font-size: 1.55rem; font-weight: 700; color: #C49A7A;
             letter-spacing: 0.14em; line-height: 1; pointer-events: none;
             font-family: 'Daytona','Oswald','Arial Narrow',sans-serif;
             font-style: normal;
@@ -244,6 +250,44 @@
             color: #991b1b; background: #fef2f2; border: 1px solid #fca5a5;
             padding: 0.2rem 0.5rem; border-radius: 0.4rem;
         }
+        .tokyo-fade-link {
+            font-family: Rockwell, "Rockwell Extra Bold", "Rockwell Nova", Georgia, serif;
+            font-weight: 700;
+            font-size: 1.22rem;
+            letter-spacing: 0.16em;
+            line-height: 1;
+            text-decoration: none;
+            color: #C49A7A;
+            border: 1.5px solid #C49A7A;
+            border-radius: 0.35rem;
+            padding: 0.28rem 0.45rem 0.22rem 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            flex-shrink: 0;
+            background: transparent;
+        }
+        .tokyo-fade-link .tokyo-arr {
+            font-family: Arial, sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 1;
+            opacity: 0.9;
+            margin-left: 0.05rem;
+        }
+        .site-title {
+            font-family: 'Oswald', 'Daytona', sans-serif;
+            font-weight: 700;
+            font-size: 1.28rem;
+            letter-spacing: 0.06em;
+            line-height: 1.05;
+            color: #8B2E1F;
+            text-transform: uppercase;
+        }
+        .dark .site-title { color: #E8B4A8; }
+        .dark .tokyo-fade-link { color: #D4B49A; border-color: #D4B49A; }
+        .tokyo-fade-link:hover { background: rgba(196,154,122,0.12); }
         .badge-michelin {
             display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em;
             color: #78350f; background: linear-gradient(90deg,#fde68a,#fbbf24);
@@ -255,12 +299,14 @@
         .box-hotel:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(166,201,236,.45); }
         .box-sight:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(159,68,17,.28); }
         .box-resto:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(212,163,115,.35); }
-        .box-book-tokyo { border-width: 3px !important; border-color: #930000 !important; }
-        .box-book-tokyo:hover { border-color: #930000 !important; box-shadow: 0 10px 28px rgba(147,0,0,.22); }
-        .box-book-other { border-width: 3px !important; border-color: #E97132 !important; }
+        .box-book-tokyo { border-width: 3px !important; border-color: #C49A7A !important; }
+        .box-book-tokyo:hover { border-color: #C49A7A !important; box-shadow: 0 10px 28px rgba(196,154,122,.28); }
+                .box-book-hokkaido { border-width: 3px !important; border-color: #8B2E1F !important; }
+        .box-book-hokkaido:hover { border-color: #8B2E1F !important; box-shadow: 0 10px 28px rgba(139,46,31,.28); }
+.box-book-other { border-width: 3px !important; border-color: #E97132 !important; }
         .box-book-other:hover { border-color: #E97132 !important; box-shadow: 0 10px 28px rgba(233,113,50,.25); }
-        .box-book-moliere { border-width: 3px !important; border-color: #D4A373 !important; }
-        .box-book-moliere:hover { border-color: #D4A373 !important; box-shadow: 0 10px 28px rgba(212,163,115,.35); }
+        .box-book-moliere { border-width: 3px !important; border-color: #CC9900 !important; }
+        .box-book-moliere:hover { border-color: #CC9900 !important; box-shadow: 0 10px 28px rgba(204,153,0,.35); }
         .airline-logo { height: 28px; width: auto; object-fit: contain; flex-shrink: 0; }
         .airline-logo-airdo { height: 40px; width: auto; object-fit: contain; flex-shrink: 0; }
         .dep-time { color: #9E0000; font-weight: 800; font-size: 1.5rem; font-family: 'Daytona','Oswald',sans-serif; line-height: 1.1; }
@@ -304,7 +350,7 @@
     <header class="sticky top-0 z-40 bg-white/90 dark:bg-zinc-950/90 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
             <div class="min-w-0 flex-1">
-                <h1 class="text-base sm:text-lg font-bold tracking-tight truncate">北海道秋季自然及溫泉之旅</h1>
+                <h1 class="site-title truncate">Hokkaido Autumn</h1>
                 <p class="text-[11px] text-zinc-400">Sep 22 – Oct 05 · Tokyo + Hokkaido</p>
             </div>
             <div class="hidden sm:flex items-center gap-2 text-xs text-zinc-500">
@@ -317,6 +363,7 @@
             <div class="hidden sm:flex items-center gap-2">
                 <button type="button" onclick="shareTripFile()" class="text-xs font-bold px-2.5 py-1.5 rounded-lg bg-[#25D366] text-white">Share</button>
             </div>
+            <a href="https://kaworu327.github.io/Tokyo-Autumn-2026/" target="_blank" rel="noopener" class="tokyo-fade-link" title="Tokyo Autumn 2026">TOKYO<span class="tokyo-arr">↗</span></a>
             <button id="themeToggle" class="p-2 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleTheme()">◐</button>
         </div>
         <div class="tab-scroll-wrap">
@@ -364,7 +411,7 @@
             </div>
             <div class="space-y-4" id="hotelsList">
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all relative" data-id="hotel-tokyu" data-cost="48448" data-search="tokyu stay shinjuku">
+                <div class="card-item box-hotel box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all relative" data-id="hotel-tokyu" data-cost="48448" data-search="tokyu stay shinjuku">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 23 – Sep 25</span>
@@ -388,7 +435,7 @@
                     <span class="city-stamp">TOKYO</span>
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-dormy" data-cost="20200" data-search="dormy inn abashiri">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-dormy" data-cost="20200" data-search="dormy inn abashiri">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 25 – Sep 26</span>
@@ -412,7 +459,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-kitakobushi" data-cost="128370" data-search="北こぶし知床">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-kitakobushi" data-cost="128370" data-search="北こぶし知床">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 26 – Sep 28</span>
@@ -436,7 +483,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-pon" data-cost="40000" data-search="ぽん・ぽんゆ">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-pon" data-cost="40000" data-search="ぽん・ぽんゆ">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 28 – Sep 29</span>
@@ -460,7 +507,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-hino" data-cost="97186" data-search="鄙の座">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-hino" data-cost="97186" data-search="鄙の座">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 29 – Sep 30</span>
@@ -484,7 +531,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-seijaku" data-cost="77616" data-search="清寂房">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-seijaku" data-cost="77616" data-search="清寂房">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Sep 30 – Oct 01</span>
@@ -508,7 +555,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-hana" data-cost="29900" data-search="花神楽">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-hana" data-cost="29900" data-search="花神楽">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Oct 01 – Oct 02</span>
@@ -532,7 +579,7 @@
                     
                 </div>
 
-                <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-vessel" data-cost="45543" data-search="vessel campana">
+                <div class="card-item box-hotel box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl shadow-sm hover:shadow-md transition-all" data-id="hotel-vessel" data-cost="45543" data-search="vessel campana">
                     <div class="flex justify-between items-start gap-3 mb-3">
                         <div class="min-w-0">
                             <span class="hotel-date-badge">Oct 02 – Oct 04</span>
@@ -634,7 +681,7 @@
                     <span class="city-stamp">TOKYO</span>
                 </div>
 
-                <div class="card-item box-resto box-book-other bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative ring-2 ring-red-300" data-id="book-res-triton" data-search="旭川 Triton 迴轉壽司">
+                <div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-triton" data-search="旭川 Triton 迴轉壽司">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider meal-lunch px-2 py-0.5 rounded">LUNCH</span> <span class="badge-unbooked">未預約 NOT BOOKED</span></div>
@@ -651,7 +698,7 @@
                     
                 </div>
 
-                <div class="card-item box-resto box-book-other bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-3" data-search="田久酢 (Takuhisa)">
+                <div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-3" data-search="田久酢 (Takuhisa)">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">DINNER</span> <span class="badge-booked">已預約 BOOKED</span></div>
@@ -1986,12 +2033,12 @@
                     <h3 class="font-bold text-base leading-snug pr-2">モエレ沼公園</h3>
                     <span class="time-daytona tabular-nums shrink-0">15:50–17:00</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">夕陽金字塔</p>
+                <p class="text-sm text-zinc-500 mb-3 flex flex-wrap items-center gap-2">夕陽金字塔 <span class="text-xs font-semibold px-2.5 py-1 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Depart at 17:00 for on-time dinner arrival</span></p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&query=モエレ沼公園" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8-5')">⬜ 完成</button>
                 </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&origin=モエレ沼公園&destination=田久鮓" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+            </div>            <a href="https://maps.app.goo.gl/FF64MAwKqDsB9shU7" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">モエレ沼公園</span>
@@ -2005,11 +2052,14 @@
             </a>            <div class="card-item box-resto bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d8-6" data-search="田久鮓（薄野）">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">田久鮓（薄野）</h3>
-                    <span class="time-daytona tabular-nums shrink-0">18:00–20:30</span>
+                    <div class="flex flex-col items-end shrink-0">
+                        <span class="time-daytona tabular-nums">18:00–20:30</span>
+                        <a href="https://tabelog.com/tw/hokkaido/A0101/A010102/1030580/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline mt-1"><span class="tabelog-score">3.74</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
                 </div>
                 <p class="text-sm text-zinc-500 mb-3">預約 18:00 · 予約番号 N36WD6P6XH</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://maps.app.goo.gl/XiZJdXB7K1DBSqUP9" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a><a href="https://tabelog.com/tw/hokkaido/A0101/A010102/1030580/" target="_blank" class="text-xs font-bold bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md">Tabelog ↗</a></div>
+                    <div class="flex flex-wrap gap-1.5 items-center"><a href="https://maps.app.goo.gl/XiZJdXB7K1DBSqUP9" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a><a href="https://maps.app.goo.gl/zRZKdY7v2v6GXJfR8" target="_blank" class="text-xs font-bold inline-flex items-center gap-1 px-2 py-1 rounded-md" style="background:#1E60A2;color:#fff;"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.05rem;height:1.05rem;border:1.5px solid #fff;border-radius:2px;font-weight:800;font-size:0.7rem;line-height:1;">P</span> Map</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8-6')">⬜ 完成</button>
                 </div>
             </div>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d8-7" data-search="Vessel Campana Susukino">
@@ -2036,7 +2086,7 @@
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d9-1" data-search="札幌市區出發">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">札幌市區出發</h3>
-                    <span class="time-daytona tabular-nums shrink-0">09:15</span>
+                    <span class="time-daytona tabular-nums shrink-0">09:45</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-3">由 Vessel 出發。</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
@@ -2057,7 +2107,7 @@
             </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-2" data-search="八剣山ワイナリー">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">八剣山ワイナリー</h3>
-                    <span class="time-daytona tabular-nums shrink-0">10:00–11:00</span>
+                    <span class="time-daytona tabular-nums shrink-0">10:30–11:30</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-3">品酒</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
@@ -2067,7 +2117,7 @@
             </div>            <div class="card-item box-resto bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-3" data-search="八剣山キッチン＆マルシェ">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">八剣山キッチン＆マルシェ</h3>
-                    <span class="time-daytona tabular-nums shrink-0">11:00–11:55</span>
+                    <span class="time-daytona tabular-nums shrink-0">11:30–12:25</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-3">酒莊咖哩</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
@@ -2085,17 +2135,31 @@
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">狸小路／大通</span>
                     <span class="route-dot"></span>
                 </div>
-            </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-4" data-search="五大買手店購物">
+            </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-4" data-search="五大買手店購物 MaW thread Arch wildlife PARCO">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">五大買手店購物</h3>
-                    <span class="time-daytona tabular-nums shrink-0">12:30–17:25</span>
+                    <span class="time-daytona tabular-nums shrink-0">13:00–17:20</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">MaW / thread / Arch / STEPS / PARCO</p>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&query=狸小路" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                <p class="text-sm text-zinc-500 mb-2 flex flex-wrap items-center gap-2">狸小路周邊 <span class="text-xs font-semibold px-2.5 py-1 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Depart at 17:20 for on-time dinner arrival</span></p>
+                <p class="text-xs text-zinc-500 mb-2">All in 狸小路 Area, except Wild Life which is near Sapporo Station.</p>
+                <ul class="text-sm space-y-2.5 mb-3 text-zinc-700 dark:text-zinc-300">
+                    <li><strong>MaW Sapporo</strong> — A.Presse / Comoli / Graphpaper / Niceness<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/maw_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://maps.app.goo.gl/1RFQSEegjiLK68Yf7" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>thread</strong> — Auralee<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/thread.sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://maps.app.goo.gl/qvEeTB2tr8EgA2Ew7" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>Arch Sapporo</strong> — 阿美咔嘰<br><span class="text-xs text-zinc-500">12:00–20:00（Wed Closed）</span> · <a href="https://www.instagram.com/arch.sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://maps.app.goo.gl/go3oerFmZKufrhucA" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>Wild Life Tailor Sapporo</strong> — A.Presse / Niceness / Batoner<br><span class="text-xs text-zinc-500">10:00–20:00</span> · <a href="https://www.instagram.com/wildlifetailor/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://maps.app.goo.gl/QUNGkrfShnwuvxw38" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a><br><span class="text-xs text-zinc-500">also in Ebisu, Tokyo</span></li>
+                    <li><strong>PARCO</strong><br><a href="https://maps.app.goo.gl/wBi3nbxgtiEc7E6QA" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li class="flex justify-between items-start gap-3">
+                        <div>
+                            <strong>BARISTART COFFEE</strong><br>
+                            <a href="https://maps.app.goo.gl/9bwT8zmerUGrBP7k8" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0101/A010102/1049009/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.46</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </li>
+                </ul>
+                <div class="flex flex-wrap justify-end items-center gap-2">
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d9-4')">⬜ 完成</button>
                 </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&origin=狸小路&destination=Restaurant+Moliere" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+            </div>            <a href="https://maps.app.goo.gl/iR6x91KCcujvJ3Uq6" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">狸小路</span>
@@ -2106,14 +2170,24 @@
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">Restaurant Moliere</span>
                     <span class="route-dot"></span>
                 </div>
-            </a>            <div class="card-item box-resto bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-5" data-search="Restaurant Moliere">
+            </a>            <div class="card-item box-resto box-book-moliere bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-5" data-search="Restaurant Moliere">
                 <div class="flex justify-between items-start gap-3 mb-2">
-                    <h3 class="font-bold text-base leading-snug pr-2">Restaurant Moliere</h3>
-                    <span class="time-daytona tabular-nums shrink-0">18:00–20:30</span>
+                    <div class="min-w-0 pr-2"><div class="mb-1"><span class="badge-michelin">MICHELIN ★★★</span></div>
+                    <h3 class="font-bold text-base leading-snug">Restaurant Moliere</h3></div>
+                    <div class="flex flex-col items-end shrink-0">
+                        <span class="time-daytona tabular-nums">17:50–20:30</span>
+                        <a href="https://tabelog.com/tw/hokkaido/A0101/A010105/1000022/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline mt-1"><span class="tabelog-score">4.27</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">米其林三星法餐 · Visa 已預約</p>
+                <p class="text-sm text-zinc-500 mb-3">米其林三星法餐 · Visa 已預約 · 17:50 到達（18:00 預約）</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://maps.app.goo.gl/71NirrdS4bLt8Ms18" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a><a href="https://tabelog.com/tw/hokkaido/A0101/A010105/1000022/" target="_blank" class="text-xs font-bold bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md">Tabelog ↗</a></div>
+                    <div class="flex flex-wrap gap-1.5 items-center">
+                        <a href="https://maps.app.goo.gl/71NirrdS4bLt8Ms18" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a>
+                        <a href="https://maps.app.goo.gl/P6H6fSq7jG8bTFFD9" target="_blank" class="text-xs font-bold inline-flex items-center gap-1 px-2 py-1 rounded-md" style="background:#1E60A2;color:#fff;"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.05rem;height:1.05rem;border:1.5px solid #fff;border-radius:2px;font-weight:800;font-size:0.7rem;line-height:1;">P</span> Map P1</a>
+                        <span class="text-[10px] text-zinc-500">Opposite, 500 yen/hr</span>
+                        <a href="https://maps.app.goo.gl/QUKH5JWJgE1dfLzBA" target="_blank" class="text-xs font-bold inline-flex items-center gap-1 px-2 py-1 rounded-md" style="background:#1E60A2;color:#fff;"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.05rem;height:1.05rem;border:1.5px solid #fff;border-radius:2px;font-weight:800;font-size:0.7rem;line-height:1;">P</span> Map P2</a>
+                        <span class="text-[10px] text-zinc-500">5mins walk, 300 yen/hr</span>
+                    </div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d9-5')">⬜ 完成</button>
                 </div>
             </div>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-6" data-search="Vessel Campana Susukino">
@@ -2910,11 +2984,19 @@
             const when = at ? new Date(at).toLocaleString('zh-HK', { hour: '2-digit', minute: '2-digit', month: 'short', day: 'numeric' }) : '';
             const liveN = days.reduce((n, d) => n + ((d.points || []).filter(p => p.source === 'live').length), 0);
             meta.textContent = `Last refresh ${when}` + (liveN ? ` · ${liveN} 地點 live forecast` : ' · 行程尚在 16 日預報窗外，顯示氣候參考');
+            const tokyoLocs = new Set(['tokyo','yokohama','aoyama']);
+            const hkgLocs = new Set(['hkg']);
             list.innerHTML = days.map(d => {
                 const points = d.points && d.points.length ? d.points : [d];
                 const showWind = !!d.showWind;
+                const keys = (d.locs && d.locs.length ? d.locs : [d.loc]).filter(Boolean);
+                const isTokyo = keys.some(k => tokyoLocs.has(k));
+                const isHkg = keys.some(k => hkgLocs.has(k));
+                const regionClass = isTokyo ? 'box-book-tokyo relative' : (isHkg ? '' : 'box-book-hokkaido');
+                const tokyoStamp = isTokyo ? '<span class="city-stamp">TOKYO</span>' : '';
                 if (points.length > 1) {
-                    return `<div class="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4">
+                    return `<div class="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 ${regionClass}">
+                        ${tokyoStamp}
                         <div class="mb-3">
                             <p class="font-bold">${d.label}</p>
                             <p class="text-xs text-zinc-400">${d.note || ''}</p>
@@ -2927,7 +3009,8 @@
                 const p = points[0];
                 const loc = p.locInfo || {};
                 const s = wxPointStats(p);
-                return `<div class="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4">
+                return `<div class="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 ${regionClass}">
+                    ${tokyoStamp}
                     <div class="flex items-start gap-3">
                         ${wxIcon(p.code)}
                         <div class="min-w-0 flex-1">
