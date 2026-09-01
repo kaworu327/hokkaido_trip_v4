@@ -290,14 +290,20 @@
         .dark .badge-optional { color: #e4e4e7; border-color: #ffffff; box-shadow: none; }
         .card-optional {
             border-style: dashed !important;
-            border-width: 1.5px !important;
+            border-width: 3px !important;
+            border-color: #BE5014 !important;
             position: relative;
             overflow: hidden;
         }
         .card-optional > * { position: relative; z-index: 1; }
         .route-optional {
             border-style: dashed !important;
-            border-width: 1.5px !important;
+            border-width: 3px !important;
+            border-color: #BE5014 !important;
+        }
+        .dark .card-optional,
+        .dark .route-optional {
+            border-color: #E07A3D !important;
         }
                 .card-optional::after {
             content: "?";
@@ -1747,40 +1753,6 @@
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
                         <span class="route-meta">約 1 hr 20 min · 約 80 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
-                        <span class="text-[10px] text-zinc-500 mt-1 text-center leading-tight">(If skip コッタロ濕原展望台)</span>
-                    </div>
-                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">ぽん・ぽんゆ</span>
-                    <span class="route-dot"></span>
-                </div>
-            </a>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=美幌峠&amp;destination=コッタロ濕原展望台" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
-                <div class="flex items-center gap-2.5">
-                    <span class="route-dot"></span>
-                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">美幌峠</span>
-                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">1 hr 10 min · 71 km</span>
-                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
-                    </div>
-                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">コッタロ濕原展望台</span>
-                    <span class="route-dot"></span>
-                </div>
-            </a>            <div class="card-item card-optional box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d4bp-6" data-search="コッタロ濕原展望台 optional">
-                <div class="flex justify-between items-start gap-3 mb-2">
-                    <div class="min-w-0 pr-2 flex flex-wrap items-center gap-2"><h3 class="font-bold text-base leading-snug">コッタロ濕原展望台</h3>
-                    <span class="badge-optional">Optional</span></div>
-                    <span class="time-daytona tabular-nums shrink-0">15:35–16:15</span>
-                </div>
-                <p class="text-sm text-zinc-500 mb-3">秋季金黃蘆葦</p>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=コッタロ湿原展望台" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d4bp-6')">⬜ 完成</button>
-                </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=コッタロ濕原展望台&amp;destination=ぽん・ぽんゆ" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
-                <div class="flex items-center gap-2.5">
-                    <span class="route-dot"></span>
-                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">コッタロ濕原展望台</span>
-                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">15 min · 12 km</span>
-                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">ぽん・ぽんゆ</span>
                     <span class="route-dot"></span>
@@ -1788,10 +1760,7 @@
             </a>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d4bp-7" data-search="ぽん・ぽんゆ（釧路濕原かや沼温泉）">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">ぽん・ぽんゆ（釧路濕原かや沼温泉）</h3>
-                    <div class="flex flex-col items-end shrink-0 leading-tight gap-1">
-                        <span class="time-daytona tabular-nums">15:35</span>
-                        <span class="time-daytona tabular-nums font-normal" style="font-weight:400;border:1.5px dashed #d4d4d8;padding:0.05rem 0.28rem;border-radius:0.25rem;">16:30</span>
-                    </div>
+                    <span class="time-daytona tabular-nums shrink-0">15:35</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-1">入住 · 隈研吾設計清水模 · 個室風呂</p>
                 <p class="text-sm font-medium mb-3" style="color:#BE5014;">If able, visit supermarket before check in, supermarket located between 美幌峠展望台 and hotel</p>
@@ -1925,34 +1894,12 @@
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=弟子屈ラーメン本店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d4lhs-6')">⬜ 完成</button>
                 </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=弟子屈市區&amp;destination=コッタロ濕原展望台" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=弟子屈ラーメン本店&amp;destination=ぽん・ぽんゆ+かや沼&amp;travelmode=driving" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">弟子屈市區</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">45 min · ~50 km</span>
-                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
-                    </div>
-                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">コッタロ濕原展望台</span>
-                    <span class="route-dot"></span>
-                </div>
-            </a>            <div class="card-item card-optional box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d4lhs-7" data-search="コッタロ濕原展望台 optional">
-                <div class="flex justify-between items-start gap-3 mb-2">
-                    <div class="min-w-0 pr-2 flex flex-wrap items-center gap-2"><h3 class="font-bold text-base leading-snug">コッタロ濕原展望台</h3>
-                    <span class="badge-optional">Optional</span></div>
-                    <span class="time-daytona tabular-nums shrink-0">15:30–16:10</span>
-                </div>
-                <p class="text-sm text-zinc-500 mb-3">夕陽蘆葦</p>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=コッタロ湿原展望台" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d4lhs-7')">⬜ 完成</button>
-                </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=コッタロ濕原展望台&amp;destination=ぽん・ぽんゆ" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
-                <div class="flex items-center gap-2.5">
-                    <span class="route-dot"></span>
-                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">コッタロ濕原展望台</span>
-                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">15 min · 12 km</span>
+                        <span class="route-meta">30 min · 25 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">ぽん・ぽんゆ</span>
@@ -1961,7 +1908,7 @@
             </a>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d4lhs-8" data-search="ぽん・ぽんゆ">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">ぽん・ぽんゆ</h3>
-                    <span class="time-daytona tabular-nums shrink-0">16:25</span>
+                    <span class="time-daytona tabular-nums shrink-0">15:15</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-1">入住 · 個室風呂</p>
                 <p class="text-sm font-medium mb-3" style="color:#BE5014;">If able, visit supermarket before check in, supermarket located between 美幌峠展望台 and hotel</p>
@@ -1980,23 +1927,44 @@
                 </div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">阿寒湖 ☁️<br>15° / 7°</div>
             </div>
-            <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>09:45 出發，中午行愛努村，13:00 遊船睇綠球藻，14:30 Check-in 鄙之座。</div>
+            <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>09:30 出發先睇コッタロ濕原，其後愛努村，13:00 遊船睇綠球藻，14:30 Check-in 鄙之座。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d5-1" data-search="ぽん・ぽんゆ 退房出發">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">ぽん・ぽんゆ 退房出發</h3>
                     <span class="time-daytona tabular-nums shrink-0">09:30</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">國道 241 號往阿寒湖。</p>
+                <p class="text-sm text-zinc-500 mb-3">先去コッタロ濕原展望台，之後國道 241 往阿寒湖。</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d5-1')">⬜ 完成</button>
                 </div>
-            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=ぽん・ぽんゆ&amp;destination=阿寒湖アイヌコタン" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=ぽん・ぽんゆ+かや沼&amp;destination=コッタロ湿原展望台&amp;travelmode=driving" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">ぽん・ぽんゆ</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">1 hr 15 min · 65 km</span>
+                        <span class="route-meta">15 min · 12 km</span>
+                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">コッタロ濕原展望台</span>
+                    <span class="route-dot"></span>
+                </div>
+            </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d5-kottaro" data-search="コッタロ濕原展望台">
+                <div class="flex justify-between items-start gap-3 mb-2">
+                    <h3 class="font-bold text-base leading-snug pr-2">コッタロ濕原展望台</h3>
+                    <span class="time-daytona tabular-nums shrink-0">09:45–10:15</span>
+                </div>
+                <p class="text-sm text-zinc-500 mb-3">釧路濕原／コッタロ川 · 停留約 30 分</p>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=コッタロ湿原展望台" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d5-kottaro')">⬜ 完成</button>
+                </div>
+            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=コッタロ湿原展望台&amp;destination=阿寒湖アイヌコタン&amp;travelmode=driving" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <span class="route-dot"></span>
+                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">コッタロ濕原展望台</span>
+                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
+                        <span class="route-meta">1 hr 20 min · ~70 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">阿寒湖アイヌコタン</span>
@@ -2005,7 +1973,7 @@
             </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d5-2" data-search="阿寒湖アイヌコタン">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">阿寒湖アイヌコタン</h3>
-                    <span class="time-daytona tabular-nums shrink-0">11:15–12:45</span>
+                    <span class="time-daytona tabular-nums shrink-0">11:35–12:45</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-3">木雕工藝店 + 午餐</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
@@ -2271,6 +2239,46 @@
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
                         <span class="route-meta">1 hr 15 min · 74 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
+                        <span class="text-[10px] text-zinc-500 mt-1 text-center leading-tight">(If skip Less HIGASHIKAWA)</span>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">森のゆ花神楽</span>
+                    <span class="route-dot"></span>
+                </div>
+            </a>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=黒岳ロープウェイ+層雲峡&amp;destination=Less+HIGASHIKAWA+東川町南町&amp;travelmode=driving" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <span class="route-dot"></span>
+                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">黒岳ロープウェイ</span>
+                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
+                        <span class="route-meta">70 min · 70 km</span>
+                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">Less HIGASHIKAWA</span>
+                    <span class="route-dot"></span>
+                </div>
+            </a>            <div class="card-item card-optional box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d7-less" data-search="Less HIGASHIKAWA 買手店 Auralee Comoli">
+                <div class="flex justify-between items-start gap-3 mb-2">
+                    <div class="min-w-0 pr-2 flex flex-wrap items-center gap-2">
+                        <h3 class="font-bold text-base leading-snug">買手店購物 (Less HIGASHIKAWA)</h3>
+                        <span class="badge-optional">Optional</span>
+                    </div>
+                    <span class="time-daytona tabular-nums shrink-0">17:20–17:50</span>
+                </div>
+                <p class="text-sm text-zinc-500 mb-1">Auralee / Comoli · 12:00–18:00（Tue / Wed 休）</p>
+                <p class="text-xs text-zinc-500 mb-3">On the route to hotel, can stop by if time allow. D7 星期四開門。</p>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <div class="flex flex-wrap gap-1.5 items-center">
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Less+HIGASHIKAWA+東川町南町1-1-6" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a>
+                        <a href="https://www.instagram.com/less_higashikawa/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
+                    </div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d7-less')">⬜ 完成</button>
+                </div>
+            </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Less+HIGASHIKAWA+東川町南町&amp;destination=森のゆ+花神楽&amp;travelmode=driving" target="_blank" class="route-optional block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <span class="route-dot"></span>
+                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">Less HIGASHIKAWA</span>
+                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
+                        <span class="route-meta">7 min · 5 km</span>
+                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">森のゆ花神楽</span>
                     <span class="route-dot"></span>
@@ -2278,7 +2286,10 @@
             </a>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d7-5" data-search="森のゆ 花神樂">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">森のゆ 花神樂</h3>
-                    <span class="time-daytona tabular-nums shrink-0">17:30</span>
+                    <div class="flex flex-col items-end shrink-0 leading-tight gap-1">
+                        <span class="time-daytona tabular-nums">17:30</span>
+                        <span class="time-daytona tabular-nums font-normal" style="font-weight:400;border:1.5px dashed #d4d4d8;padding:0.05rem 0.28rem;border-radius:0.25rem;">18:00</span>
+                    </div>
                 </div>
                 <p class="text-sm text-zinc-500 mb-1">入住 · 個室風呂</p>
                 <p class="text-sm font-medium mb-3" style="color:#BE5014;">If able, visit supermarket before check in</p>
