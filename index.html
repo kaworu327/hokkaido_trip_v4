@@ -288,6 +288,24 @@
             align-self: center;
         }
         .dark .badge-optional { color: #e4e4e7; border-color: #ffffff; box-shadow: none; }
+        .drive-today-box {
+            border: 1.5px solid #1E60A2;
+            background: #D5E6F7;
+            color: #1E60A2;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.02em;
+            padding: 0.35rem 0.6rem;
+            border-radius: 0.5rem;
+            white-space: nowrap;
+            line-height: 1.2;
+            align-self: flex-start;
+        }
+        .dark .drive-today-box {
+            background: rgba(30,96,162,0.18);
+            border-color: #7EB3E0;
+            color: #93C5FD;
+        }
         .card-optional {
             border-style: dashed !important;
             border-width: 3px !important;
@@ -628,6 +646,7 @@
                         <p>• 餐食：❌ 不含早餐 / ❌ 不含晚餐</p>
                         <p>• 溫泉：❌ 無</p>
                         <p>• 費用：¥48,448 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
+                        <p class="font-medium" style="color:#BE5014;">• To be picked up: Shrimp crackers, Sake</p>
                     </div>
                     <div class="flex flex-wrap gap-2 pt-3 pb-8 border-t border-zinc-100 dark:border-zinc-800">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyu+Stay+Shinjuku" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-lg">Map ↗</a>
@@ -676,6 +695,7 @@
                         <p>• 餐食：🥣 含早餐 / 🍱 含晚餐</p>
                         <p>• 溫泉：♨️ 個室風呂付</p>
                         <p>• 費用：¥128,370 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
+                        <p class="font-medium" style="color:#BE5014;">• To be picked up: Dress ×1, Towel ×1</p>
                     </div>
                     <div class="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=北こぶし知床+ホテル" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-lg">Map ↗</a>
@@ -726,6 +746,7 @@
                         <p>• 餐食：🥣 含早餐 / 🍱 含晚餐</p>
                         <p>• 溫泉：♨️ 個室風呂付</p>
                         <p>• 費用：¥97,186 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
+                        <p class="font-medium" style="color:#BE5014;">• To be picked up: Coffee Bag</p>
                     </div>
                     <div class="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=あかん鶴雅別荘+鄙の座" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-lg">Map ↗</a>
@@ -749,6 +770,7 @@
                     <div class="text-sm text-zinc-600 dark:text-zinc-300 space-y-1 mb-4">
                         <p>• 餐食：🥣 含早餐 / 🍱 含晚餐</p>
                         <p>• 溫泉：♨️ 個室風呂付</p>
+                        <p>• 備註：<span style="color:#BE5014;font-weight:600;">BYOB possible for dinner</span></p>
                         <p>• 費用：¥77,616 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
                     </div>
                     <div class="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
@@ -958,22 +980,25 @@
             </div>
             <h3 class="text-sm font-bold uppercase tracking-wider text-zinc-400 pt-4">Hair Cut 理髮</h3>
             <div class="space-y-4">
-                <div class="card-item bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="book-hair-1" data-search="cow minami hair">
-                    <div class="flex justify-between items-start gap-3 mb-2">
-                        <div>
-                            <h3 class="text-base font-bold">Cow · Stylist Minami</h3>
-                            <p class="text-sm text-zinc-500 mt-1">時間：待確認 TBC</p>
-                        </div>
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Maison+de+Noche+Ebisu" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md shrink-0">Map ↗</a>
+                <div class="card-item box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-hair-1" data-search="cow minami hair Maison de Noche">
+                    <div class="flex flex-wrap items-center gap-1.5"><span class="badge-booked">已預約 BOOKED</span> <span class="text-[11px] font-bold tracking-wider" style="color:#C49A7A;">TOKYO</span></div>
+                    <h3 class="text-base font-bold mt-0.5">Cow · Stylist Minami</h3>
+                    <p class="text-xs text-zinc-500 mb-2">Maison de Noche</p>
+                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 23</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">15:30</span><span class="booking-time-label">Booking Time</span></div></div>
+                    <div class="flex mt-3 items-center gap-2 flex-wrap">
+                        <a href="https://www.google.com/maps/place/Maison+de+Noche/@35.6461164,139.7007119,17.25z/data=!3m1!5s0x60188b47047bde6d:0x51dc09d44faf24c!4m6!3m5!1s0x60188b4703888ee7:0x339747777123c9d3!8m2!3d35.6448655!4d139.7043372!16s%2Fg%2F11csbsz0bz" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a>
+                        <a href="https://www.instagram.com/u__pth8/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
+                        <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-hair-1')">⬜ 完成</button>
                     </div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700 mt-2" onclick="toggleComplete(this,'book-hair-1')">⬜ 完成</button>
                 </div>
-                <div class="card-item bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="book-hair-2" data-search="fufu hair tbc">
-                    <div class="flex justify-between items-start gap-3">
-                        <div>
-                            <h3 class="text-base font-bold">Fufu</h3>
-                            <p class="text-sm text-zinc-500 mt-1">地點 / 時間：待確認 TBC</p>
-                        </div>
+                <div class="card-item box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-hair-2" data-search="fufu hair Meguro Higashiyama">
+                    <div class="flex flex-wrap items-center gap-1.5"><span class="badge-booked">已預約 BOOKED</span> <span class="text-[11px] font-bold tracking-wider" style="color:#C49A7A;">TOKYO</span></div>
+                    <h3 class="text-base font-bold mt-0.5">Fufu</h3>
+                    <p class="text-xs text-zinc-500 mb-2">東山・目黒</p>
+                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 23</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">15:30</span><span class="booking-time-label">Booking Time</span></div></div>
+                    <div class="flex mt-3 items-center gap-2 flex-wrap">
+                        <a href="https://www.google.com/maps/place/2-ch%C5%8Dme-3-4+Higashiyama,+Meguro+City,+Tokyo+153-0043,+Japan/@35.6487827,139.6893051,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b52dad023dd:0xc8dd6e9a11185370!8m2!3d35.6487784!4d139.69188!16s%2Fg%2F11clq0csln" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a>
+                        <a href="https://www.instagram.com/mg_alku/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
                         <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-hair-2')">⬜ 完成</button>
                     </div>
                 </div>
@@ -988,7 +1013,7 @@
                 </div>
                 <div class="bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl px-4 py-3 shrink-0 text-right">
                     <p class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">Total Cost per head</p>
-                    <p class="text-xl font-bold mt-1 tabular-nums">$6,215</p>
+                    <p class="text-xl font-bold mt-1 tabular-nums">~$6,050</p>
                 </div>
             </div>
             <div class="space-y-4">
@@ -1079,6 +1104,7 @@
                             <h3 class="text-base font-bold leading-tight">Nissan Rent a car</h3>
                             <p class="text-xs text-zinc-500 m-0 mt-0.5">PH2</p>
                         </div>
+                        <div class="drive-today-box ml-auto shrink-0">Total Driving: 1,323 km</div>
                     </div>
                     <div class="flight-card-route">
                         <div class="flex flex-col items-center">
@@ -1103,8 +1129,8 @@
                     </div>
                     <div class="flight-card-meta">
                         <div>
-                            <p class="text-xs text-zinc-500 m-0">費用：¥103,952 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
-                            <p class="text-xs m-0"><span class="font-bold text-amber-600">Booking Reference: R06EGOZQ</span></p>
+                            <p class="text-xs text-zinc-500 m-0">費用：¥86,654 · <span class="pay-status text-amber-600 font-medium">未付款</span></p>
+                            <p class="text-xs m-0"><span class="font-bold text-amber-600">Booking Reference: RC22461283779309306</span></p>
                             <p class="text-xs text-zinc-500 m-0">Incl. ETC Card / All insurance</p>
                             <p class="text-xs text-zinc-500 m-0">Cancel deadline: Sep 16 EOD</p>
                         </div>
@@ -1149,13 +1175,59 @@
                         <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Arrive 20–30 mins before Dep Time</div>
                         <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEE2E2;color:#9E0000;border:1px solid #FECACA;">⚠ Check sailing condition 1 hr prior</div>
                     </div>
-                    <p class="text-xs text-zinc-500 mt-3 mb-0">費用：¥5,000 per head</p>
+                    <p class="text-xs text-zinc-500 mt-3 mb-0">費用：¥2,700 per head</p>
                     <div class="flight-card-meta">
                         <div class="flex flex-wrap gap-1.5">
                             <a href="https://www.ms-aurora.com/shiretoko/departures/" target="_blank" class="text-xs font-bold px-2.5 py-1.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Sailing Condition ↗</a>
                             <a href="https://www.google.com/maps/search/?api=1&amp;query=知床観光船オーロラ" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a>
                         </div>
                         <p class="term-label m-0">14:15–16:15</p>
+                    </div>
+                </div>
+
+                <div class="card-item bg-white dark:bg-zinc-900/40 p-4 sm:p-5 rounded-2xl" style="border:3px solid #0070C0;" data-id="sailing-akan" data-search="阿寒湖遊船 阿寒観光汽船 チュウルイ">
+                    <div class="flight-card-top">
+                        <div class="flight-date-box">
+                            <span class="booking-date-num">Sep 29</span>
+                            <span class="booking-date-label">Sailing Date</span>
+                        </div>
+                        <span class="text-2xl leading-none" aria-hidden="true">⛴️</span>
+                        <div>
+                            <h3 class="text-base font-bold leading-tight">阿寒湖遊船</h3>
+                            <p class="text-xs text-zinc-400 m-0">Company · 阿寒観光汽船</p>
+                        </div>
+                        <span class="badge-unbooked ml-auto">未預約 NOT BOOKED</span>
+                    </div>
+                    <div class="flight-card-route">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg leading-none">⛴️</span>
+                            <div>
+                                <div class="text-sm font-semibold">阿寒湖一周コース（チュウルイ島・マリモ）13:00便</div>
+                                <div class="text-[11px] text-zinc-400 font-medium">Planned sailing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flight-card-times">
+                        <div class="flight-time-cell" style="background:transparent;border-color:#E3A0A0;">
+                            <span class="flight-time-label-sm" style="color:#9E0000;font-weight:500;">Check-in Time</span>
+                            <span class="dep-time" style="font-weight:400;">12:40</span>
+                        </div>
+                        <div class="flight-time-cell flight-time-cell-dep">
+                            <span class="flight-time-label-sm">Dep Time</span>
+                            <span class="dep-time">13:00</span>
+                        </div>
+                    </div>
+                    <div class="mt-3 space-y-1.5">
+                        <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Arrive 20–30 mins before Dep Time</div>
+                        <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEE2E2;color:#9E0000;border:1px solid #FECACA;">⚠ Check sailing condition 1 hr prior</div>
+                    </div>
+                    <div class="flight-card-meta">
+                        <div class="flex flex-wrap gap-1.5">
+                            <a href="https://www.akankisen.com/_big5/index.html" target="_blank" class="text-xs font-bold px-2.5 py-1.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Official ↗</a>
+                            <a href="https://www.akankisen.com/areaMap.html" target="_blank" class="text-xs font-bold px-2.5 py-1.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Area Map ↗</a>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=阿寒湖遊覧船+まりもの里桟橋" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a>
+                        </div>
+                        <p class="term-label m-0">12:40–14:25</p>
                     </div>
                 </div>
 
@@ -1262,7 +1334,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 1 · Sep 25 (Fri)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">抵達網走、直奔必比登</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 40 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">網走 ☁️<br>18° / 12°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>飛抵女滿別機場，落機即衝米其林必比登「喜八」歎鄂霍次克海鮮，直入網走溫泉酒店。</div>
             <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d1-1" data-search="女滿別機場 (MMB)">
@@ -1328,7 +1403,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 2 · Sep 26 (Sat)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">能取湖 · 網走監獄 · 流冰館 · 北こぶし</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 132 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">網走 ☀️<br>17° / 9°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>能取湖珊瑚草、網走監獄、流冰館 360 午餐，傍晚入住知床北こぶし。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d2-1" data-search="Dormy Inn 退房出發">
@@ -1451,7 +1529,8 @@
                     <h3 class="font-bold text-base leading-snug pr-2">北こぶし知床 ホテル＆リゾート</h3>
                     <span class="time-daytona tabular-nums shrink-0">16:00</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">入住 · 個室風呂 · 含早晚餐</p>
+                <p class="text-sm text-zinc-500 mb-1">入住 · 個室風呂 · 含早晚餐</p>
+                <p class="text-sm font-medium mb-3" style="color:#BE5014;">To be picked up: Dress ×1, Towel ×1</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=北こぶし知床" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d2-7')">⬜ 完成</button>
@@ -1464,7 +1543,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 3 · Sep 27 (Sun)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">知床五湖 · 極光號 · 知床峠</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 78 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">ウトロ ☁️<br>16° / 8°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>知床五湖地上遊歩道大圈，午後極光號觀光船，黃昏知床峠。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d3-1" data-search="北こぶし 出發">
@@ -1649,7 +1731,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 4 (美幌峠) · Sep 28 (Mon)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">屈斜路湖美幌峠巔峰絕景</p>
                 </div>
+                <div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 223 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">弟子屈 ☀️<br>16° / 8°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>打卡「天堂之路」同美幌峠俯瞰屈斜路湖，去摩周湖睇神秘摩周藍，黃昏入住濕原秘境設計宿【ぽん・ぽんゆ】。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d4bp-1" data-search="北こぶし知床 退房出發">
@@ -1776,7 +1861,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 4 (硫磺山) · Sep 28 (Mon)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">觸天之路 ➔ 硫磺山活火山</p>
                 </div>
+                <div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 149 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">弟子屈 ☀️<br>16° / 8°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>天堂之路、硫磺山地熱、摩周湖，黃昏入住ぽん・ぽんゆ。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d4lhs-1" data-search="北こぶし知床 退房出發">
@@ -1925,7 +2013,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 5 · Sep 29 (Tue)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">純粹的阿寒湖靈性度假日</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 82 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">阿寒湖 ☁️<br>15° / 7°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>09:30 出發先睇コッタロ濕原，其後愛努村，13:00 遊船睇綠球藻，14:30 Check-in 鄙之座。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d5-1" data-search="ぽん・ぽんゆ 退房出發">
@@ -1980,14 +2071,41 @@
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=阿寒湖アイヌコタン" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d5-2')">⬜ 完成</button>
                 </div>
-            </div>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d5-3" data-search="阿寒湖遊船（13:00 航班）">
+            </div>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d5-3" data-search="阿寒湖遊船 阿寒観光汽船 チュウルイ">
                 <div class="flex justify-between items-start gap-3 mb-2">
-                    <h3 class="font-bold text-base leading-snug pr-2">阿寒湖遊船（13:00 航班）</h3>
-                    <span class="time-daytona tabular-nums shrink-0">13:00–14:25</span>
+                    <span class="badge-unbooked">未預約 NOT BOOKED</span>
+                    <span class="time-daytona tabular-nums shrink-0">12:40–14:25</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">Churui 島綠球藻</p>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=阿寒湖遊覧船" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                <h3 class="font-bold text-base leading-snug">阿寒湖遊船</h3>
+                <p class="text-xs text-zinc-400 mt-0.5 mb-1">Company · 阿寒観光汽船</p>
+                <p class="text-xs text-zinc-500 mb-3">費用：¥2,700 per head</p>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-lg leading-none" aria-hidden="true">⛴️</span>
+                    <div>
+                        <div class="text-sm font-semibold text-zinc-800 dark:text-zinc-100">阿寒湖一周コース（チュウルイ島・マリモ）13:00便</div>
+                        <div class="text-[11px] text-zinc-400 font-medium">Planned sailing</div>
+                    </div>
+                </div>
+                <div class="flight-card-times" style="margin-top:0;">
+                    <div class="flight-time-cell" style="background:transparent;border-color:#E3A0A0;">
+                        <span class="flight-time-label-sm" style="color:#9E0000;font-weight:500;">Check-in Time</span>
+                        <span class="dep-time" style="font-weight:400;">12:40</span>
+                    </div>
+                    <div class="flight-time-cell flight-time-cell-dep">
+                        <span class="flight-time-label-sm">Dep Time</span>
+                        <span class="dep-time">13:00</span>
+                    </div>
+                </div>
+                <div class="mt-3 space-y-1.5">
+                    <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Arrive 20–30 mins before Dep Time</div>
+                    <div class="text-xs font-semibold px-2.5 py-1.5 rounded-md" style="background:#FEE2E2;color:#9E0000;border:1px solid #FECACA;">⚠ Check sailing condition 1 hr prior</div>
+                </div>
+                <div class="flex flex-wrap justify-between items-center gap-2 mt-3">
+                    <div class="flex flex-wrap gap-1.5">
+                        <a href="https://www.akankisen.com/_big5/index.html" target="_blank" class="text-xs font-bold px-2.5 py-1.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Official ↗</a>
+                        <a href="https://www.akankisen.com/areaMap.html" target="_blank" class="text-xs font-bold px-2.5 py-1.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Area Map ↗</a>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=阿寒湖遊覧船+まりもの里桟橋" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a>
+                    </div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d5-3')">⬜ 完成</button>
                 </div>
             </div>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d5-4" data-search="あかん鶴雅別荘 鄙の座">
@@ -1995,7 +2113,8 @@
                     <h3 class="font-bold text-base leading-snug pr-2">あかん鶴雅別荘 鄙の座</h3>
                     <span class="time-daytona tabular-nums shrink-0">14:30</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">Check-in · 客房私湯</p>
+                <p class="text-sm text-zinc-500 mb-1">Check-in · 客房私湯</p>
+                <p class="text-sm font-medium mb-3" style="color:#BE5014;">To be picked up: Coffee Bag</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=あかん鶴雅別荘+鄙の座" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d5-4')">⬜ 完成</button>
@@ -2008,7 +2127,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 6 · Sep 30 (Wed)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">阿寒湖 → 十勝川</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 130 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">十勝 🌤️<br>16° / 7°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>瀧見橋、池田ワイン城、元祖豚丼、十勝が丘、清寂房。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d6-1" data-search="鄙の座 退房出發">
@@ -2074,14 +2196,29 @@
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">元祖ぱんちょう</span>
                     <span class="route-dot"></span>
                 </div>
-            </a>            <div class="card-item box-resto bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d6-4" data-search="元祖ぱんちょう豚丼">
+            </a>            <div class="card-item box-resto bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d6-4" data-search="元祖ぱんちょう豚丼 とん田">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">元祖ぱんちょう豚丼</h3>
-                    <span class="time-daytona tabular-nums shrink-0">13:20–14:00</span>
+                    <div class="flex flex-col items-end shrink-0">
+                        <span class="time-daytona tabular-nums">13:20–14:00</span>
+                        <a href="https://tabelog.com/tw/hokkaido/A0111/A011101/1000213/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline mt-1"><span class="tabelog-score">3.61</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">炭烤豚丼</p>
+                <p class="text-sm text-zinc-500 mb-1">炭烤豚丼 · 元祖</p>
+                <p class="text-xs text-zinc-500 mb-3">Tue–Sun 11:00–19:00（售完即止）· 月曜休、第1／第3火曜休 · D6 星期三開門</p>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="min-w-0">
+                            <p class="font-bold text-sm leading-snug m-0">備選 · ぶた丼のとん田</p>
+                            <p class="text-xs text-zinc-500 mt-1 mb-0">Daily 11:00–18:00（售完即止）· 年中無休（年末年始除外）</p>
+                            <p class="text-xs text-zinc-500 mt-0.5 mb-2">東10条南 17-2 · 帶廣站約 8 分車 · Tabelog 高過本店</p>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=ぶた丼のとん田+帯広市東10条南" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0111/A011101/1056297/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.66</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=元祖ぱんちょう" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a><a href="https://tabelog.com/hokkaido/A0115/A011501/1000103/" target="_blank" class="text-xs font-bold bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md">Tabelog ↗</a></div>
+                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=元祖ぱんちょう+帯広市西一条南11-19" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d6-4')">⬜ 完成</button>
                 </div>
             </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=元祖ぱんちょう&amp;destination=十勝が丘展望台" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
@@ -2121,10 +2258,53 @@
                     <h3 class="font-bold text-base leading-snug pr-2">十勝川モール温泉 清寂房</h3>
                     <span class="time-daytona tabular-nums shrink-0">15:00</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-3">入住 · 摩爾溫泉</p>
+                <p class="text-sm text-zinc-500 mb-2">入住 · 摩爾溫泉</p>
+                <p class="text-xs mb-3"><span style="color:#BE5014;font-weight:600;">BYOB possible for dinner</span></p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=十勝川モール温泉+清寂房" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d6-6')">⬜ 完成</button>
+                </div>
+            </div>
+            <div class="card-item card-optional box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d6-sweets" data-search="六花亭 柳月 帶廣本店">
+                <div class="flex justify-between items-start gap-3 mb-2">
+                    <div class="min-w-0 pr-2 flex flex-wrap items-center gap-2">
+                        <h3 class="font-bold text-base leading-snug">帶廣伴手禮（本店）</h3>
+                        <span class="badge-optional">Optional</span>
+                    </div>
+                    <span class="time-daytona tabular-nums shrink-0">15:00+</span>
+                </div>
+                <p class="text-sm text-zinc-500 mb-3">入住後若有時間，可去帶廣市中心兩間本店買伴手禮（約 15–20 分車）</p>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="min-w-0">
+                            <p class="font-bold text-sm leading-snug m-0">六花亭 帶廣本店</p>
+                            <p class="text-xs text-zinc-500 mt-1 mb-0">賣場 10:00–18:00 · 無休（2F 喫茶室逢水曜休）</p>
+                            <p class="text-xs text-zinc-500 mt-0.5 mb-2">西2条南 9-6 · 馬爾賽奶油三明治</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=六花亭+帯広本店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                                <a href="https://www.rokkatei.co.jp/shop/obihiro/" target="_blank" class="text-xs font-bold px-2 py-0.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Official ↗</a>
+                            </div>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0111/A011101/1000012/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.55</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="min-w-0">
+                            <p class="font-bold text-sm leading-snug m-0">柳月 帶廣大通本店</p>
+                            <p class="text-xs text-zinc-500 mt-1 mb-0">08:30–19:30 · 停車場約 20 位</p>
+                            <p class="text-xs text-zinc-500 mt-0.5 mb-2">大通南 8-15 · 三方六年輪蛋糕</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=柳月+大通本店+帯広" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                                <a href="https://www.ryugetsu.co.jp/info/shop/" target="_blank" class="text-xs font-bold px-2 py-0.5 rounded-md" style="background:#DBEAFE;color:#1E60A2;">Official ↗</a>
+                            </div>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0111/A011101/1000860/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.26</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <div></div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d6-sweets')">⬜ 完成</button>
                 </div>
             </div>
         </div>
@@ -2134,7 +2314,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 7 · Oct 01 (Thu)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">三國峠樹海 ➔ 黑岳纜車</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 203 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">層雲峽 ☁️<br>13° / 5°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>三國峠紅葉樹海、流星／銀河之瀑、黒岳纜車，夜宿花神楽。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d7-1" data-search="清寂房 退房出發">
@@ -2310,7 +2493,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 8 · Oct 02 (Fri) · Urban</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">美瑛青池 ➔ 旭川美術館 ➔ Triton ➔ 札幌</p>
                 </div>
+                <div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 238 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">美瑛／札幌 🌤️<br>14° / 6°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>青池／白鬍子、旭川美術館、Triton、モエレ沼、田久鮓。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d8-1" data-search="花神樂 退房出發">
@@ -2390,6 +2576,17 @@
                 </div>
                 <p class="text-sm text-zinc-500 mb-2">12:30 抵達預留排隊 · 未預約</p>
                 <p class="text-xs font-semibold px-2.5 py-1.5 rounded-md mb-3" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Long queue possible, casual lunch as alternative</p>
+                <div class="mt-2 mb-3 p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="min-w-0">
+                            <p class="font-bold text-sm leading-snug m-0">TK-COFFEE</p>
+                            <p class="text-xs text-zinc-500 mt-1 mb-0">Wed–Fri 07:30–18:30 · Sat–Sun 07:30–16:00 · Mon / Tue 休</p>
+                            <p class="text-xs text-zinc-500 mt-0.5 mb-2">滝川市新町 1-11-11</p>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=TK-COFFEE+滝川市新町" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0107/A010705/1083935/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.03</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8-4')">⬜ 完成</button>
@@ -2473,7 +2670,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 8 · Oct 02 (Fri) · Nature</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">青池 ➔ 三愛之丘 ➔ 四季彩之丘 ➔ Triton ➔ 札幌</p>
                 </div>
+                <div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 252 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">美瑛／札幌 🌤️<br>14° / 6°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>青池／白鬍子、美瑛丘陵、Triton、モエレ沼、田久鮓。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d8n-1" data-search="花神樂 退房出發">
@@ -2534,7 +2734,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">白金青い池</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">25 min</span>
+                        <span class="route-meta">25 min · 13 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">三愛之丘</span>
@@ -2557,7 +2757,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">三愛之丘</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">5–10 min</span>
+                        <span class="route-meta">8 min · 8 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">四季彩之丘</span>
@@ -2580,7 +2780,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">四季彩之丘</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">30–35 min</span>
+                        <span class="route-meta">35 min · 40 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">Triton 旭神</span>
@@ -2598,6 +2798,17 @@
                 </div>
                 <p class="text-sm text-zinc-500 mb-2">13:00 抵達 · 未預約</p>
                 <p class="text-xs font-semibold px-2.5 py-1.5 rounded-md mb-3" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Long queue possible, casual lunch as alternative</p>
+                <div class="mt-2 mb-3 p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="min-w-0">
+                            <p class="font-bold text-sm leading-snug m-0">TK-COFFEE</p>
+                            <p class="text-xs text-zinc-500 mt-1 mb-0">Wed–Fri 07:30–18:30 · Sat–Sun 07:30–16:00 · Mon / Tue 休</p>
+                            <p class="text-xs text-zinc-500 mt-0.5 mb-2">滝川市新町 1-11-11</p>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=TK-COFFEE+滝川市新町" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                        </div>
+                        <a href="https://tabelog.com/tw/hokkaido/A0107/A010705/1083935/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.03</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5 items-center"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8n-5')">⬜ 完成</button>
@@ -2682,7 +2893,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 9 · Oct 03 (Sat)</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">八劍山 ➔ 購物 ➔ BIOTOP ➔ Moliere</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 40 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">札幌 ☀️<br>15° / 8°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>八劍山 90 分、狸小路買手店、BIOTOP、步行去米其林三星 Moliere。</div>
             <div class="card-item  bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d9-1" data-search="札幌市區出發">
@@ -2727,27 +2941,50 @@
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">狸小路停車場</span>
                     <span class="route-dot"></span>
                 </div>
-            </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-4" data-search="五大買手店購物 MaW thread Arch wildlife PARCO">
+            </a>            <div class="card-item box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d9-4" data-search="Shopping 狸小路 MaW thread Arch wildlife PARCO Kapital Moonrise SHARE Captain Tom">
                 <div class="flex justify-between items-start gap-3 mb-2">
-                    <h3 class="font-bold text-base leading-snug pr-2">五大買手店購物</h3>
+                    <h3 class="font-bold text-base leading-snug pr-2">Shopping in 狸小路 area</h3>
                     <span class="time-daytona tabular-nums shrink-0">12:10–16:50</span>
                 </div>
                 <p class="text-sm text-zinc-500 mb-2 flex flex-wrap items-center gap-2">狸小路周邊 <span class="text-xs font-semibold px-2.5 py-1 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Depart at 16:50 for BIOTOP → 17:50 Moliere</span></p>
                 <p class="text-xs text-zinc-500 mb-2">All in 狸小路 Area, except Wild Life which is near Sapporo Station.</p>
-                <ul class="text-sm space-y-2.5 mb-3 text-zinc-700 dark:text-zinc-300">
-                    <li><strong>MaW Sapporo</strong> — A.Presse / Comoli / Graphpaper / Niceness<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/maw_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=MaW+Sapporo" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
-                    <li><strong>thread</strong> — Auralee<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/thread.sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=thread+Sapporo+Auralee" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Select shops（From hotel near to far）</p>
+                    <ul class="text-sm space-y-2.5 mb-0 text-zinc-700 dark:text-zinc-300">
                     <li><strong>Arch Sapporo</strong> — 阿美咔嘰<br><span class="text-xs text-zinc-500">12:00–20:00（Wed Closed）</span> · <a href="https://www.instagram.com/arch.sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Arch+Sapporo+狸小路" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
-                    <li><strong>Wild Life Tailor Sapporo</strong> — A.Presse / Niceness / Batoner<br><span class="text-xs text-zinc-500">10:00–20:00</span> · <a href="https://www.instagram.com/wildlifetailor/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=WILD+LIFE+TAILOR+Sapporo" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a><br><span class="text-xs text-zinc-500">also in Ebisu, Tokyo</span></li>
-                    <li><strong>PARCO</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=札幌PARCO" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
-                    <li class="flex justify-between items-start gap-3">
+                    <li><strong>thread</strong> — Auralee<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/thread.sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=thread+Sapporo+Auralee" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>MaW Sapporo</strong> — A.Presse / Comoli / Graphpaper / Niceness<br><span class="text-xs text-zinc-500">11:00–19:00</span> · <a href="https://www.instagram.com/maw_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=MaW+Sapporo" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>BEAMS Sapporo</strong> — 南1西3<br><span class="text-xs text-zinc-500">11:00–20:00</span> · <a href="https://www.instagram.com/beams_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://maps.app.goo.gl/fCrA2w2rqgGDp5fN9" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>Kapital Sapporo</strong> — KAPITAL<br><span class="text-xs text-zinc-500">11:00–20:00（Tue Closed）</span> · <a href="https://www.instagram.com/kapital_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=KAPITAL+札幌+南2条西1" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a></li>
+                    <li><strong>Wild Life Tailor Sapporo</strong> — A.Presse / Niceness / Batoner <span class="text-xs font-semibold px-2 py-0.5 rounded-md" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">Near Sapporo JR</span><br><span class="text-xs text-zinc-500">10:00–20:00</span> · <a href="https://www.instagram.com/wildlifetailor/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=WILD+LIFE+TAILOR+Sapporo" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a><br><span class="text-xs text-zinc-500">also in Ebisu, Tokyo</span></li>
+                    </ul>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Shopping mall</p>
+                    <div class="flex flex-wrap items-center gap-2 text-sm">
+                        <strong>PARCO</strong>
+                        <span class="text-xs font-semibold px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;border:1px solid #FDE047;">Chiikawa game pop up（7F: 18/9–4/10, 10:00–20:00）</span>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=札幌PARCO" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Vintage（From hotel near to far）</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-[13px] leading-tight text-zinc-700 dark:text-zinc-300">
+                        <div class="flex items-baseline gap-1.5 min-w-0 flex-wrap"><span class="font-semibold">Moonrise</span><span class="text-zinc-400">· vintage / silver</span><span class="text-[10px] text-zinc-400">12–20</span><a href="https://www.instagram.com/moonrise_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=moonrise+札幌+南3条西8" target="_blank" class="text-[10px] font-bold text-[#1E60A2]">Map</a></div>
+                        <div class="flex items-baseline gap-1.5 min-w-0 flex-wrap"><span class="font-semibold">SHARE 1丁目店</span><span class="text-zinc-400">· 古着</span><span class="text-[10px] text-zinc-400">平13–20／祝12–20</span><a href="https://www.instagram.com/share_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=古着屋SHARE+狸小路1丁目" target="_blank" class="text-[10px] font-bold text-[#1E60A2]">Map</a></div>
+                        <div class="flex items-baseline gap-1.5 min-w-0 flex-wrap"><span class="font-semibold">Captain Tom’s</span><span class="text-zinc-400">· Military</span><span class="text-[10px] text-zinc-400">11–20 Wed休</span><a href="https://www.instagram.com/captaintoms_sapporo/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=CAPTAIN+TOM%27S+札幌+南2条西1" target="_blank" class="text-[10px] font-bold text-[#1E60A2]">Map</a></div>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">Cafe</p>
+                    <div class="flex justify-between items-start gap-3">
                         <div>
-                            <strong>BARISTART COFFEE</strong><br>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=BARISTART+COFFEE+札幌" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                            <p class="font-bold text-sm m-0">BARISTART COFFEE</p>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=BARISTART+COFFEE+札幌" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md mt-1 inline-block">Map ↗</a>
                         </div>
                         <a href="https://tabelog.com/tw/hokkaido/A0101/A010102/1049009/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.46</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap items-center gap-1.5">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=三井のリパーク+狸小路3丁目第5" target="_blank" class="text-xs font-bold inline-flex items-center gap-1 px-2 py-1 rounded-md" style="background:#1E60A2;color:#fff;"><span style="display:inline-flex;align-items:center;justify-content:center;width:1.05rem;height:1.05rem;border:1.5px solid #fff;border-radius:2px;font-weight:800;font-size:0.7rem;line-height:1;">P</span> Map P1</a>
@@ -2839,7 +3076,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 10 · Oct 04 (Sun) · w/ Otaru</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">小樽 ➔ 頭大佛 ➔ 芸術の森 ➔ 機場</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 143 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">小樽／札幌／千歲 🌤️<br>14° / 7°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>小樽 Chiikawa + nearby 約 90 分，運河／堺町通，午後頭大佛＋芸術の森各約 60 分，約 17:00–17:30 抵 CTS 還車。</div>
             <div class="card-item bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d10-1" data-search="Vessel Hotel Campana Susukino 出發 退房">
@@ -2858,7 +3098,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">Vessel Campana</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">約 45 min · 開車</span>
+                        <span class="route-meta">45 min · 40 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">小樽堺町通</span>
@@ -2878,13 +3118,23 @@
                         Chiikawa 海綿蛋糕 10:00–17:00
                     </p>
                     <p class="font-medium text-zinc-700 dark:text-zinc-300">Nearby (1-5 mins walk)</p>
-                    <ul class="list-disc pl-5 space-y-1">
+                    <ul class="list-disc pl-5 space-y-1 mb-3">
                         <li>メルヘン交差点 — 店前石燈廣場，招牌打卡位</li>
-                        <li>LeTAO 本店（堺町 7-16）— 雙層芝士蛋糕</li>
                         <li>北一硝子三號館（堺町 7-26）— 石倉玻璃工房</li>
                         <li>小樽オルゴール堂 — 蒸汽鐘／音樂盒</li>
                         <li>出抜小路 — 運河方向石倉小巷</li>
                     </ul>
+                    <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
+                        <div class="flex justify-between items-start gap-3">
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm leading-snug m-0">LeTAO 本店</p>
+                                <p class="text-xs text-zinc-500 mt-1 mb-0">Daily 09:00–18:00（L.O. 17:30）· 無休</p>
+                                <p class="text-xs text-zinc-500 mt-0.5 mb-2">堺町 7-16 · 雙層芝士蛋糕</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=LeTAO+本店+小樽市堺町7-16" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                            </div>
+                            <a href="https://tabelog.com/tw/hokkaido/A0106/A010601/1000304/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.55</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5">
@@ -2920,10 +3170,20 @@
                     <ul class="list-disc pl-5 space-y-1">
                         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3+%E6%B5%85%E8%8D%89%E6%A9%8B" target="_blank" class="underline underline-offset-2">淺草橋／中央橋</a> — 運河正面經典取景</li>
                         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%BA" target="_blank" class="underline underline-offset-2">運河遊船</a> — 時間緊可只喺碼頭影相</li>
-                        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=LeTAO+%E9%81%8B%E6%B2%B3%E3%83%97%E3%83%A9%E3%82%B6%E5%BA%97" target="_blank" class="underline underline-offset-2">LeTAO 運河プラザ</a> — 舊倉庫旗艦，運河邊甜品</li>
                         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E5%B8%82%E7%B7%8F%E5%90%88%E5%8D%9A%E7%89%A9%E9%A4%A8+%E9%81%8B%E6%B2%B3%E9%A4%A8" target="_blank" class="underline underline-offset-2">運河館</a> — 舊小樽倉庫，外觀都值得影</li>
                         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A7%E5%9B%BD%E9%89%84%E6%89%8B%E5%AE%AE%E7%B7%9A" target="_blank" class="underline underline-offset-2">舊國鐵手宮線</a> — 可行走嘅舊路軌，近運河北端</li>
                     </ul>
+                    <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mt-2">
+                        <div class="flex justify-between items-start gap-3">
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm leading-snug m-0">LeTAO 運河プラザ</p>
+                                <p class="text-xs text-zinc-500 mt-1 mb-0">Daily · Shop / Café 10:00–18:00（Café L.O. 17:30）· 一番庫至 22:00</p>
+                                <p class="text-xs text-zinc-500 mt-0.5 mb-2">色内 2-1-20 · 舊倉庫旗艦 · 無休</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=LeTAO+運河プラザ店+小樽" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">Map ↗</a>
+                            </div>
+                            <a href="https://tabelog.com/tw/hokkaido/A0106/A010601/1079454/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.53</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
@@ -2962,7 +3222,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">堺町通</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">約 60 min · 開車</span>
+                        <span class="route-meta">60 min · 55 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">頭大佛殿</span>
@@ -2985,7 +3245,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">頭大佛殿</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">約 10–15 min · 開車</span>
+                        <span class="route-meta">12 min · 8 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">札幌芸術の森</span>
@@ -3008,7 +3268,7 @@
                     <span class="route-dot"></span>
                     <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">札幌芸術の森</span>
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
-                        <span class="route-meta">約 50 min · 開車 · 預留緩衝</span>
+                        <span class="route-meta">50 min · 40 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">新千歲機場</span>
@@ -3055,7 +3315,10 @@
                     <h2 class="text-xl font-semibold tracking-tight">Day 10 · Oct 04 (Sun) · No Otaru</h2>
                     <p class="text-sm text-zinc-500 mt-0.5">安藤建築 ➔ 鮭魚逆流 ➔ 機場</p>
                 </div>
+<div class="flex items-start gap-2.5 shrink-0">
+                <div class="drive-today-box">Today Driving: 95 km</div>
                 <div class="text-right text-xs text-zinc-400 shrink-0">札幌／千歲 🌤️<br>14° / 7°</div>
+            </div>
             </div>
             <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 rounded-xl p-4 text-sm">📌 <strong>今日亮點：</strong>頭大仏殿、芸術の森、羊ヶ丘、千歲水族館，還車飛羽田。</div>
             <div class="card-item bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl" data-id="d10n-1" data-search="酒店退房出發 No Otaru">
