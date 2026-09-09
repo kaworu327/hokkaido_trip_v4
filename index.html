@@ -308,7 +308,7 @@
         }
         .card-optional {
             border-style: dashed !important;
-            border-width: 3px !important;
+            border-width: 1.5px !important;
             border-color: #BE5014 !important;
             position: relative;
             overflow: hidden;
@@ -316,8 +316,18 @@
         .card-optional > * { position: relative; z-index: 1; }
         .route-optional {
             border-style: dashed !important;
-            border-width: 3px !important;
+            border-width: 1.5px !important;
             border-color: #BE5014 !important;
+        }
+        .card-book, .route-book {
+            border-color: #FF0000 !important;
+        }
+        .card-book::after {
+            color: #FF0000;
+            background: linear-gradient(to left, #FF0000 18%, rgba(255,0,0,0) 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .dark .card-optional,
         .dark .route-optional {
@@ -2422,7 +2432,7 @@
                     <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
                         <span class="route-meta">1 hr 15 min · 74 km</span>
                         <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
-                        <span class="text-[10px] text-zinc-500 mt-1 text-center leading-tight">(If skip Less HIGASHIKAWA)</span>
+                        <span class="text-[10px] text-zinc-500 mt-1 text-center leading-tight">(If skip optional shops)</span>
                     </div>
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">森のゆ花神楽</span>
                     <span class="route-dot"></span>
@@ -2446,11 +2456,12 @@
                     </div>
                     <span class="time-daytona tabular-nums shrink-0">17:20–17:50</span>
                 </div>
-                <p class="text-sm text-zinc-500 mb-1">Auralee / Comoli · 12:00–18:00（Tue / Wed 休）</p>
-                <p class="text-xs text-zinc-500 mb-3">On the route to hotel, can stop by if time allow. D7 星期四開門。</p>
+                <p class="text-sm text-zinc-500 mb-1">Auralee / Comoli / ssstein</p>
+                <p class="text-xs text-zinc-500 mb-3">12:00–18:00（Closed Tue / Wed）· On the route to hotel, can stop by if time allow. D7 星期四開門。</p>
                 <div class="flex flex-wrap justify-between items-center gap-2">
                     <div class="flex flex-wrap gap-1.5 items-center">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=Less+HIGASHIKAWA+東川町南町1-1-6" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a>
+                        <a href="https://less-web.shop/" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Web ↗</a>
                         <a href="https://www.instagram.com/less_higashikawa/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
                     </div>
                     <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d7-less')">⬜ 完成</button>
@@ -2466,12 +2477,56 @@
                     <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">森のゆ花神楽</span>
                     <span class="route-dot"></span>
                 </div>
+            </a>            <a href="https://maps.app.goo.gl/AN8Hw3VAq2zSRqFaA" target="_blank" class="route-optional route-book block group bg-zinc-50 dark:bg-zinc-900/60 border rounded-xl px-4 py-3.5 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <span class="route-dot"></span>
+                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">黒岳ロープウェイ</span>
+                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
+                        <span class="route-meta">70 min</span>
+                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">in my book store</span>
+                    <span class="route-dot"></span>
+                </div>
+            </a>
+            <div class="card-item card-optional card-book box-sight bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d7-book" data-search="in my book store 書店">
+                <div class="flex justify-between items-start gap-3 mb-2">
+                    <div class="min-w-0 pr-2 flex flex-wrap items-center gap-2">
+                        <h3 class="font-bold text-base leading-snug">買手店購物 (in my book store)</h3>
+                        <span class="badge-optional">Optional</span>
+                    </div>
+                    <span class="time-daytona tabular-nums shrink-0">17:25–17:55</span>
+                </div>
+                <p class="text-sm text-zinc-500 mb-1">Alternative to Less HIGASHIKAWA</p>
+                <p class="text-xs text-zinc-500 mb-1">A Presse / Graphpaper / Foundour</p>
+                <p class="text-xs text-zinc-500 mb-3">12:00–19:00（Closed Tue / Wed）</p>
+                <div class="flex flex-wrap justify-between items-center gap-2">
+                    <div class="flex flex-wrap gap-1.5 items-center">
+                        <a href="https://maps.app.goo.gl/BKWjBVLsNQ8yR8GY8" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a>
+                        <a href="https://www.instagram.com/in_my_book_store/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
+                        <a href="https://inmybookstore.com/" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Web ↗</a>
+                    </div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d7-book')">⬜ 完成</button>
+                </div>
+            </div>
+            <a href="https://maps.app.goo.gl/JAdZh5GAok7XwAkS8" target="_blank" class="route-optional route-book block group bg-zinc-50 dark:bg-zinc-900/60 border rounded-xl px-4 py-3.5 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <span class="route-dot"></span>
+                    <span class="text-sm font-medium text-zinc-600 dark:text-zinc-300 truncate max-w-[32%]">in my book store</span>
+                    <div class="flex-1 min-w-[56px] flex flex-col items-center justify-center px-1">
+                        <span class="route-meta">30 min</span>
+                        <span class="route-track"><span class="route-shaft"></span><span class="route-head"></span></span>
+                    </div>
+                    <span class="text-sm font-medium text-zinc-800 dark:text-zinc-100 truncate max-w-[32%] text-right">森のゆ花神楽</span>
+                    <span class="route-dot"></span>
+                </div>
             </a>            <div class="card-item box-hotel bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl" data-id="d7-5" data-search="森のゆ 花神樂">
                 <div class="flex justify-between items-start gap-3 mb-2">
                     <h3 class="font-bold text-base leading-snug pr-2">森のゆ 花神樂</h3>
                     <div class="flex flex-col items-end shrink-0 leading-tight gap-1">
                         <span class="time-daytona tabular-nums">17:30</span>
-                        <span class="time-daytona tabular-nums font-normal" style="font-weight:400;border:1.5px dashed #d4d4d8;padding:0.05rem 0.28rem;border-radius:0.25rem;">18:00</span>
+                        <span class="time-daytona tabular-nums font-normal" style="font-weight:400;color:#E97132;border:1.5px dashed #E97132;padding:0.05rem 0.28rem;border-radius:0.25rem;">18:00</span>
+                        <span class="time-daytona tabular-nums font-normal" style="font-weight:400;color:#FF0000;border:1.5px dashed #FF0000;padding:0.05rem 0.28rem;border-radius:0.25rem;">18:25</span>
                     </div>
                 </div>
                 <p class="text-sm text-zinc-500 mb-1">入住 · 個室風呂</p>
