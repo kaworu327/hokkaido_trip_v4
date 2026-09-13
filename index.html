@@ -1,3 +1,8 @@
+
+
+Hokkaido_Trip_2026.html
+
+Files
 <!DOCTYPE html>
 <html lang="zh-Hant" class="light">
 <head>
@@ -579,6 +584,29 @@
         .wx-rain-high { color: #DC2626; }
         .wx-icon { width: 52px; height: 52px; flex-shrink: 0; }
         .wx-source { font-size: 0.7rem; color: #a1a1aa; }
+    
+        .booking-day-pair {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .booking-day-pair { grid-template-columns: 1fr 1fr; }
+            .booking-day-pair > .card-item { min-width: 0; }
+        }
+
+    
+        .booking-day-label {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #920000;
+            margin: 0.6rem 0 0.2rem;
+            font-family: 'Daytona','Oswald','Arial Narrow',sans-serif;
+        }
+        .city-stamp-hokkaido { color: #8B2E1F !important; }
+
     </style>
 </head>
 <body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 min-h-screen flex flex-col">
@@ -852,25 +880,25 @@
             </div>
             <h3 class="text-sm font-bold uppercase tracking-wider text-zinc-400 pt-2">Restaurants 餐廳</h3>
             <div class="space-y-4">
-
-                <div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-bettola" data-search="LA BETTOLA da Ochiai">
+<p class="booking-day-label">Sep 23</p>
+<div class="booking-day-pair">
+<div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-kino" data-search="KINO_">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider meal-lunch px-2 py-0.5 rounded">LUNCH</span> <span class="badge-booked">已預約 BOOKED</span></div>
                             
-                            <h3 class="text-base font-bold mt-0.5">LA BETTOLA da Ochiai</h3>
-                            
+                            <h3 class="text-base font-bold mt-0.5">KINO_</h3>
+                            <p class="text-sm text-zinc-500 mt-1">予約番号：<span class="font-mono font-semibold text-zinc-800 dark:text-zinc-200">KJ9PKLLAK6</span></p>
                         </div>
                         <div class="flex flex-col items-end shrink-0">
-                            <a href="https://tabelog.com/tw/tokyo/A1313/A131301/13002504/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline" title="Tabelog"><span class="tabelog-score">3.68</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                            <a href="https://tabelog.com/tokyo/A1304/A130403/13285210/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline" title="Tabelog"><span class="tabelog-score">3.99</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
                         </div>
                     </div>
-                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 23</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">13:30</span><span class="booking-time-label">Booking Time</span></div></div>
-                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=LA+BETTOLA+da+Ochiai" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-bettola')">⬜ 完成</button></div>
+                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 23</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">12:00</span><span class="booking-time-label">Booking Time</span></div></div>
+                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=KINO_+Shinjuku" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-kino')">⬜ 完成</button></div>
                     <span class="city-stamp">TOKYO</span>
                 </div>
-
-                <div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-1" data-search="焼肉ヒロミヤ 四谷4号店">
+<div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-1" data-search="焼肉ヒロミヤ 四谷4号店">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">DINNER</span> <span class="badge-booked">已預約 BOOKED</span></div>
@@ -886,43 +914,40 @@
                     <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=焼肉ヒロミヤ+四谷四丁目" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-1')">⬜ 完成</button></div>
                     <span class="city-stamp">TOKYO</span>
                 </div>
-
-                <div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-2" data-search="炭火割烹 庵">
+                </div>
+<p class="booking-day-label">Sep 24</p>
+<div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-bettola" data-search="LA BETTOLA da Ochiai">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider meal-lunch px-2 py-0.5 rounded">LUNCH</span> <span class="badge-booked">已預約 BOOKED</span></div>
                             
-                            <h3 class="text-base font-bold mt-0.5">炭火割烹 庵</h3>
+                            <h3 class="text-base font-bold mt-0.5">LA BETTOLA da Ochiai</h3>
                             
                         </div>
                         <div class="flex flex-col items-end shrink-0">
-                            <a href="https://tabelog.com/tw/kanagawa/A1401/A140104/14079044/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline" title="Tabelog"><span class="tabelog-score">3.86</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                            <a href="https://tabelog.com/tw/tokyo/A1313/A131301/13002504/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline" title="Tabelog"><span class="tabelog-score">3.68</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
                         </div>
                     </div>
-                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 24</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">13:00</span><span class="booking-time-label">Booking Time</span></div></div>
-                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=炭焼割烹+庵+横浜" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-2')">⬜ 完成</button></div>
+                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 24</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">11:30</span><span class="booking-time-label">Booking Time</span></div></div>
+                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=LA+BETTOLA+da+Ochiai" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-bettola')">⬜ 完成</button></div>
                     <span class="city-stamp">TOKYO</span>
                 </div>
-
-                <div class="card-item box-resto box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-kino" data-search="KINO_">
+<p class="booking-day-label">Sep 25</p>
+<div class="booking-day-pair">
+                <div class="card-item box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-chiikawa" data-search="Chiikawa Park ちいかわパーク">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
-                            <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider meal-lunch px-2 py-0.5 rounded">LUNCH</span> <span class="badge-booked">已預約 BOOKED</span></div>
-                            
-                            <h3 class="text-base font-bold mt-0.5">KINO_</h3>
-                            <p class="text-sm text-zinc-500 mt-1">予約番号：<span class="font-mono font-semibold text-zinc-800 dark:text-zinc-200">KJ9PKLLAK6</span></p>
-                        </div>
-                        <div class="flex flex-col items-end shrink-0">
-                            <a href="https://tabelog.com/tokyo/A1304/A130403/13285210/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline" title="Tabelog"><span class="tabelog-score">3.99</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
+                            <div class="flex flex-wrap items-center gap-1.5"><span class="badge-booked">已預約 BOOKED</span> <span class="text-[11px] font-bold tracking-wider" style="color:#C49A7A;">TOKYO</span></div>
+                            <h3 class="text-base font-bold mt-0.5">Chiikawa Park</h3>
+                            <p class="text-xs text-zinc-500 mt-1">ちいかわパーク · 池袋 Sunshine City Annex</p>
                         </div>
                     </div>
-                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 25</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">12:00</span><span class="booking-time-label">Booking Time</span></div></div>
-                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=KINO_+Shinjuku" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-kino')">⬜ 完成</button></div>
+                    <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 25</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">11:40</span><span class="booking-time-label">Booking Time</span></div></div>
+                    <p class="text-xs mt-2"><span style="color:#BE5014;font-weight:600;">Stay until 13:30</span></p>
+                    <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=ちいかわパーク+サンシャインシティ" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><a href="https://chiikawapark-tokyo.jp/" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Web ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-chiikawa')">⬜ 完成</button></div>
                     <span class="city-stamp">TOKYO</span>
                 </div>
-
-
-                <div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-kihachi" data-search="酒菜亭 喜八">
+<div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-kihachi" data-search="酒菜亭 喜八">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">DINNER</span> <span class="badge-booked">已預約 BOOKED</span></div>
@@ -935,9 +960,12 @@
                     </div>
                     <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Sep 25</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">19:30</span><span class="booking-time-label">Booking Time</span></div></div>
                     <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=酒菜亭+喜八+網走" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-kihachi')">⬜ 完成</button></div>
+                    <span class="city-stamp city-stamp-hokkaido">HOKKAIDO</span>
                 </div>
-
-                <div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-triton" data-search="旭川 Triton 迴轉壽司">
+                </div>
+<p class="booking-day-label">Oct 2</p>
+<div class="booking-day-pair">
+<div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-triton" data-search="旭川 Triton 迴轉壽司">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider meal-lunch px-2 py-0.5 rounded">LUNCH</span> <span class="badge-unbooked">未預約 NOT BOOKED</span></div>
@@ -951,10 +979,8 @@
                     </div>
                     <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Oct 2</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">13:00</span><span class="booking-time-label">Booking Time</span></div></div>
                     <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-triton')">⬜ 完成</button></div>
-                    
                 </div>
-
-                <div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-3" data-search="田久酢 (Takuhisa)">
+<div class="card-item box-resto box-book-hokkaido bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-3" data-search="田久酢 (Takuhisa)">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">DINNER</span> <span class="badge-booked">已預約 BOOKED</span></div>
@@ -968,10 +994,10 @@
                     </div>
                     <div class="booking-dt-grid"><div class="booking-dt-cell booking-dt-cell-date"><span class="booking-date-num">Oct 2</span><span class="booking-date-label">Booking Date</span></div><div class="booking-dt-cell booking-dt-cell-time"><span class="booking-time-num">18:00</span><span class="booking-time-label">Booking Time</span></div></div>
                     <div class="flex mt-3 items-center gap-2 flex-wrap"><a href="https://www.google.com/maps/search/?api=1&amp;query=田久鮓+薄野" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1.5 rounded-md">Map ↗</a><button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-res-3')">⬜ 完成</button></div>
-                    
                 </div>
-
-                <div class="card-item box-resto box-book-moliere bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-5" data-search="Restaurant Moliere">
+</div>
+<p class="booking-day-label">Oct 3</p>
+<div class="card-item box-resto box-book-moliere bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-res-5" data-search="Restaurant Moliere">
                     <div class="flex justify-between items-start gap-4">
                         <div class="min-w-0 flex-1">
                             <div class="flex flex-wrap items-center gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded">DINNER</span> <span class="badge-michelin">MICHELIN ★★★</span> <span class="badge-booked">已預約 BOOKED · Visa</span></div>
@@ -990,6 +1016,7 @@
             </div>
             <h3 class="text-sm font-bold uppercase tracking-wider text-zinc-400 pt-4">Hair Cut 理髮</h3>
             <div class="space-y-4">
+                <div class="booking-day-pair">
                 <div class="card-item box-book-tokyo bg-white dark:bg-zinc-900/40 border p-5 rounded-2xl relative" data-id="book-hair-1" data-search="cow minami hair Maison de Noche">
                     <div class="flex flex-wrap items-center gap-1.5"><span class="badge-booked">已預約 BOOKED</span> <span class="text-[11px] font-bold tracking-wider" style="color:#C49A7A;">TOKYO</span></div>
                     <h3 class="text-base font-bold mt-0.5">Cow · Stylist Minami</h3>
@@ -1011,6 +1038,7 @@
                         <a href="https://www.instagram.com/mg_alku/" target="_blank" class="ig-mini" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg><span class="ig-arr">↗</span></a>
                         <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'book-hair-2')">⬜ 完成</button>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -2216,7 +2244,11 @@
                 </div>
                 <p class="text-sm text-zinc-500 mb-1">炭烤豚丼 · 元祖</p>
                 <p class="text-xs text-zinc-500 mb-3">Tue–Sun 11:00–19:00（售完即止）· 月曜休、第1／第3火曜休 · D6 星期三開門</p>
-                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40 mb-3">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=元祖ぱんちょう+帯広市西一条南11-19" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d6-4')">⬜ 完成</button>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
                     <div class="flex justify-between items-start gap-3">
                         <div class="min-w-0">
                             <p class="font-bold text-sm leading-snug m-0">備選 · ぶた丼のとん田</p>
@@ -2226,10 +2258,6 @@
                         </div>
                         <a href="https://tabelog.com/tw/hokkaido/A0111/A011101/1056297/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.66</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
                     </div>
-                </div>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=元祖ぱんちょう+帯広市西一条南11-19" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d6-4')">⬜ 完成</button>
                 </div>
             </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=元祖ぱんちょう&amp;destination=十勝が丘展望台" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
@@ -2631,7 +2659,11 @@
                 </div>
                 <p class="text-sm text-zinc-500 mb-2">12:30 抵達預留排隊 · 未預約</p>
                 <p class="text-xs font-semibold px-2.5 py-1.5 rounded-md mb-3" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Long queue possible, casual lunch as alternative</p>
-                <div class="mt-2 mb-3 p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8-4')">⬜ 完成</button>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
                     <div class="flex justify-between items-start gap-3">
                         <div class="min-w-0">
                             <p class="font-bold text-sm leading-snug m-0">TK-COFFEE</p>
@@ -2642,10 +2674,7 @@
                         <a href="https://tabelog.com/tw/hokkaido/A0107/A010705/1083935/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.03</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8-4')">⬜ 完成</button>
-                </div>
+
             </div>            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3%E6%97%AD%E5%B7%9D&amp;destination=%E3%83%A2%E3%82%A8%E3%83%AC%E6%B2%BC%E5%85%AC%E5%9C%92" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
                     <span class="route-dot"></span>
@@ -2853,7 +2882,11 @@
                 </div>
                 <p class="text-sm text-zinc-500 mb-2">13:00 抵達 · 未預約</p>
                 <p class="text-xs font-semibold px-2.5 py-1.5 rounded-md mb-3" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">⚠ Long queue possible, casual lunch as alternative</p>
-                <div class="mt-2 mb-3 p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
+                    <div class="flex flex-wrap gap-1.5 items-center"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
+                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8n-5')">⬜ 完成</button>
+                </div>
+                <div class="p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/70 dark:bg-zinc-900/40">
                     <div class="flex justify-between items-start gap-3">
                         <div class="min-w-0">
                             <p class="font-bold text-sm leading-snug m-0">TK-COFFEE</p>
@@ -2864,10 +2897,7 @@
                         <a href="https://tabelog.com/tw/hokkaido/A0107/A010705/1083935/" target="_blank" class="inline-flex flex-col items-center leading-tight no-underline shrink-0"><span class="tabelog-score">3.03</span><span class="text-[10px] font-bold text-zinc-500 mt-0.5">tabelog ↗</span></a>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-between items-center gap-2">
-                    <div class="flex flex-wrap gap-1.5 items-center"><a href="https://www.google.com/maps/search/?api=1&amp;query=回転寿しトリトン+旭川旭神店" target="_blank" class="text-xs font-bold bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md">Map ↗</a></div>
-                    <button class="check-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-700" onclick="toggleComplete(this,'d8n-5')">⬜ 完成</button>
-                </div>
+
             </div>
             <a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E3%83%88%E3%83%AA%E3%83%88%E3%83%B3%E6%97%AD%E5%B7%9D&amp;destination=%E3%83%A2%E3%82%A8%E3%83%AC%E6%B2%BC%E5%85%AC%E5%9C%92" target="_blank" class="block group bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 hover:border-[#0070C0]/60 rounded-xl px-4 py-3.5 transition-all">
                 <div class="flex items-center gap-2.5">
